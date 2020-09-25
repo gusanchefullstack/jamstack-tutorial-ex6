@@ -1,0 +1,13 @@
+---
+title: About this Page
+layout: base.njk
+---
+
+<div class="container">
+  <h1>This is a page for you</h1>
+  <p>It was made with HTML, CSS, Javascript and served with JAMstack</p>
+</div>
+
+{% for item in news %}
+  <a href="/{{ item.country}}">{{ item.country}}</a>
+{% endfor %}
