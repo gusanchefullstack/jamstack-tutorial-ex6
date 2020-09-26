@@ -16,6 +16,14 @@ permalink: /{{ news.country }}/index.html
   <div class="love">
     ❤
   </div>
+  <div id="weather" class="hidden">
+  <h2>Weather near you</h2>
+    <p id="city"></p>
+    <p id="temp"></p>
+    <p id="main"></p>
+    <p id="desc"></p>
+  </div>
+  <h2>News near you</h2>
   <ol>
     {% for article in news.articles -%}
       <li><a href="{{article.url}}">{{ article.title }}</a></li>
