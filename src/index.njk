@@ -1,0 +1,30 @@
+---
+title: My JAMstack app
+layout: base.njk
+---
+
+<div class="container">
+  <h1>This is a page for you</h1>
+  <div class="vibe">
+    You are Great!
+  </div>
+  <div class="love">
+    ❤
+  </div>
+  <div id="weather" class="hidden">
+  <h2>Weather near you</h2>
+    <p id="city"></p>
+    <p id="temp"></p>
+    <p id="main"></p>
+    <p id="desc"></p>
+  </div>
+  <h2>News near you</h2>
+  <ol>
+    {% for article in news[0].articles -%}
+      <li><a href="{{article.url}}">{{ article.title }}</a></li>
+      <span>{{article.source.name}}</span> | <span>{{article.publishedAt}}</span>
+    {% endfor -%}
+  </ol>
+</div>
+<script src="js/vibe.js"></script>
+<script src="js/weather.js"></script>
